@@ -83,7 +83,7 @@ df.to_sql('parcelas', con=engine, if_exists='replace', index=False, schema='cont
 É isso, com os dados salvos em um banco de dados relacional é possível agora realizar consultas SQL e/ou utilizar o DBT para criar toda sorte de views e tabelas automaticamente para facilitar a análise de dados e a criação de dashboards.
 
 
-* TODO Refatoração Azure Data Factory com Bash Script
+* Refatoração Azure Data Factory com Bash Script :datafactory:azure:sed:jq:bash:script:
 :PROPERTIES:
 :EXPORT_FILE_NAME: refatoracao-data-factory-bash
 :EXPORT_DATE: 2022-10-06

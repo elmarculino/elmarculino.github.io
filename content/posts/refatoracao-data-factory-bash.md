@@ -2,7 +2,8 @@
 title = "Refatoração Azure Data Factory com Bash Script"
 author = ["Marco Ribeiro"]
 date = 2022-10-06
-draft = true
+tags = ["datafactory", "azure", "sed", "jq", "bash", "script"]
+draft = false
 +++
 
 Nem tudo na vida de um engenheiro de dados são flores. As vezes é necessário fazer a "difícil" escolha entre usar força bruta ou passar horas alterando manualmente pipelines de dados em interfaces ‘clica e arrasta’. Para ilustrar o problema em questão, usaremos o caso do orquestrador de pipelines de dados Azure Data Factory da Microsoft. Por trás da interface gráfica, os pipelines, linked services e data sources são salvos em arquivos JSON que se referenciam e que posteriormente são processados para a geração dos ARM Templates e implantação nos workspaces.
