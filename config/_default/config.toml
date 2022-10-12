@@ -2,7 +2,7 @@
 # Refer to the theme docs for more details about each of these parameters.
 # https://nunocoracao.github.io/blowfish/docs/getting-started/
 
-baseURL = "http://elmarculino.github.io"
+baseURL = "http://marcoribeiro.ml"
 theme = "blowfish"
 languageCode = "en"
 defaultContentLanguage = "en"
