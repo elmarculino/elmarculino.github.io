@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: http://elmarculino.github.io/sitemap.xml
