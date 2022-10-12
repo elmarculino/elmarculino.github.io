@@ -1,8 +1,8 @@
 #+hugo_base_dir: ../
 #+seq_todo: TODO DRAFT DONE
 #+property: header-args :eval never-export
+#+hugo_front_matter_format: yaml
 #+startup: indent
-
 #+author: Marco Ribeiro
 
 * Extração de Dados do Amazon DynamoDB para Postgres/MySQL :postgres:mysql:dynamodb:python:etl:
@@ -15,14 +15,12 @@ Um tempo atrás criei uma aplicação web para gerenciamento de contas a pagar e
 
 Para solucionar esse problema e cruzar os dados de contas a pagar com os de vendas, que são vem de um sistema com banco de dados Microsoft SQL, a solução mais fácil foi extrair as tabelas do DynamoDB e salvá-los em uma base Postgres (Ou qualquer banco de dados relacional que você preferir). Para isso foram utilizados os pacotes abaixo:
 
-
 ** Importação dos pacotes necessários
 #+begin_src python
 import boto3
 import pandas as pd
 from sqlalchemy import create_engine
 #+end_src
-
 
 ** Criação dos objetos utilizados na extração
 #+begin_src python
@@ -81,7 +79,6 @@ df.to_sql('parcelas', con=engine, if_exists='replace', index=False, schema='cont
 #+end_src
 
 É isso, com os dados salvos em um banco de dados relacional é possível agora realizar consultas SQL e/ou utilizar o DBT para criar toda sorte de views e tabelas automaticamente para facilitar a análise de dados e a criação de dashboards.
-
 
 * Refatoração Azure Data Factory com Bash Script :datafactory:azure:sed:jq:bash:script:
 :PROPERTIES:
@@ -152,7 +149,7 @@ done
 
 #+end_src
 
-* VIM
+* VIM :vim:shortcuts:
 :PROPERTIES:
 :EXPORT_FILE_NAME: vim-key-bindings
 :EXPORT_DATE: 2020-01-10
@@ -402,7 +399,7 @@ gS : to split a one-liner into multiple lines
 gJ : to join a block into a single-line statement.
 #+END_SRC
 
-* Emacs
+* Emacs :emacs:shortcuts:
 :PROPERTIES:
 :EXPORT_FILE_NAME: emacs-key-bindings
 :EXPORT_DATE: 2020-01-10
@@ -542,27 +539,13 @@ print(list(zip(a, b)))
 #+RESULTS:
 : [(1, 'a'), (2, 'b'), (3, 'c')]
 
-* Hadoop
-** Stanford Course
-[[http://web.stanford.edu/class/cs246/][CS246: Mining Massive Data Sets]]
-[[http://web.stanford.edu/class/cs246h/][CS246H - Mining Massive Data Sets: Hadoop Labs]]
-[[https://www.youtube.com/playlist?list=PLLssT5z_DsK9JDLcT8T62VtzwyW9LNepV][CS246 Youtube playlist]]
-
 * Criando Um Gerador de Imagens de Placas de Carros
 :PROPERTIES:
 :EXPORT_FILE_NAME: gerador-imagens-placas-carros
 :END:
-Para treinar um modelo de machine learning que realize o reconhecimento de
-caracteres, OCR, é necessário uma grande quantidade de imagens de placas. Daria
-um trabalho enorme conseguir milhares de imagens de carros com as placas
-visiveis, recortar as placas das imagens e anotar as imagens com os textos dos
-números das placas. Minha solução para obter essas milhares de imagens foi
-simplesmente gerá-las.
+Para treinar um modelo de machine learning que realize o reconhecimento de caracteres, OCR, é necessário uma grande quantidade de imagens de placas. Daria um trabalho enorme conseguir milhares de imagens de carros com as placas visíveis, recortar as placas das imagens e anotar as imagens com os textos dos números das placas. Minha solução para obter essas milhares de imagens foi simplesmente gerá-las.
 
-Como o Brasil está adotando um novo padrão de placas é necessário utilizar dois
-templates. O primeiro utiliza imagens de placas antigas e insere os caracteres
-no padrão ABC-1234, o segundo com imagens de placas novas, insere os caracteres
-com a nova fonte no padrão ABC1D23 com 4 letras e 3 números.
+Como o Brasil está adotando um novo padrão de placas é necessário utilizar dois templates. O primeiro utiliza imagens de placas antigas e insere os caracteres no padrão ABC-1234, o segundo com imagens de placas novas, insere os caracteres com a nova fonte no padrão ABC1D23 com 4 letras e 3 números.
 
 Para gerar os números de placas antigas foram utilizadas as seguintes funções:
 
@@ -597,26 +580,15 @@ print(f'Placa nova: {new_plate}')
 
 Para gerar as imagens das placas
 
-* Como Substituir a Última Camada de Rede Neural no PyTorch
+* Como Substituir a Última Camada de Rede Neural no PyTorch :pytorch:
 :PROPERTIES:
 :EXPORT_FILE_NAME: substituir-ultima-camada-rede-neural-pytorch
 :EXPORT_DATE: 2020-01-14
 :END:
 
-Durante o desenvolvimento de uma aplicação utilizando /machine learning/ para,
-por exemplo, classificar imagens, não é necessário que se desenvolva uma
-/Convolutional Neural Network/ do zero. Isso na verdade seria uma enorme perda
-de tempo e recursos computacionais, além de exigir do desenvolvedor expertise em
-tópicos como a inicialização dos pesos na rede neural. A técnica mais utilizada
-hoje em dia para desenvolver esse tipo de aplicação é a utilização de /transfer
-learning/, a modificação de redes neurais treinadas para outros fins que são
-alteradas e passam por treinamento fino para executar outras atividades.
+Durante o desenvolvimento de uma aplicação utilizando /machine learning/ para, por exemplo, classificar imagens, não é necessário que se desenvolva uma /Convolutional Neural Network/ do zero. Isso na verdade seria uma enorme perda de tempo e recursos computacionais, além de exigir do desenvolvedor expertise em tópicos como a inicialização dos pesos na rede neural. A técnica mais utilizada hoje em dia para desenvolver esse tipo de aplicação é a utilização de /transfer learning/, a modificação de redes neurais treinadas para outros fins que são alteradas e passam por treinamento fino para executar outras atividades.
 
-Um exemplo comum é a utilização da DCNN ImageNet, uma rede neural com 60 milhões
-de parametros e 500 mil neurons treinada com mais de 1,3 milhão de imagens para
-a classificação de 1000 diferentes classes. A idéia, nesse caso, é remover a
-última camada da rede, treinada para a classificação das 1000 classes, e
-substituir por outra que será treinada com um novo dataset para um novo objetivo.
+Um exemplo comum é a utilização da DCNN ImageNet, uma rede neural com 60 milhões de parametros e 500 mil neurons treinada com mais de 1,3 milhão de imagens para a classificação de 1000 diferentes classes. A idea, nesse caso, é remover a última camada da rede, treinada para a classificação das 1000 classes, e substituir por outra que será treinada com um novo dataset para um novo objetivo.
 
 *Remover usando o index*
 #+BEGIN_SRC python
@@ -638,7 +610,7 @@ m_cut = resnet18[:cut]
 cnn = nn.Sequential(m_cut, AdaptiveConcatPool2d())
 
 #+END_SRC
-* Best command line tools
+* Best command line tools :bash:fzf:ripgrep:fd:
 :PROPERTIES:
 :EXPORT_DATE: 2020-02-10
 :EXPORT_FILE_NAME: awesome-command-line-tools
@@ -687,17 +659,13 @@ export FZF_DEFAULT_COMMAND='fd --type f'
 #+BEGIN_SRC sh
 rg 'fast\w+' README.md
 #+END_SRC
-* Vim Personal Minimal Setup
+* Vim Personal Minimal Setup :vim:
 :PROPERTIES:
 :EXPORT_FILE_NAME: vim-minimal-setup
 :EXPORT_DATE: 2020-02-10
 :END:
 
-Use Vim without your own .vimrc is not an easy task. Tranning to a
-certification test I was forced to use an virtual machine without my
-customizations. So, I had to find an minimal setup that would make the default
-Vim usable for me. That one linner is what I type every time I open Vim
-without my config:
+Use Vim without your own .vimrc is not an easy task. Trainning to a certification test I was forced to use an virtual machine without my customizations. So, I had to find an minimal setup that would make the default Vim usable for me. That one-liner is what I type every time I open Vim without my config:
 
 #+BEGIN_SRC sh
 set nocp rnu ai et sw=4 ts=4 bs=2
@@ -721,74 +689,9 @@ set ts=4 # tabstop
 set sw=4 # shiftwidth
 set bs=2 # backspace "allows the backspace to work
 #+END_SRC
-* My Local Hadoop/Spark Config files
-** mapred-site.xml
 
-#+BEGIN_SRC xml
-<configuration>
-    <property>
-        <name>mapreduce.framework.name</name>
-        <value>yarn</value>
-    </property>
-    <property>
-        <name>mapreduce.application.classpath</name>
-        <value>$HADOOP_MAPRED_HOME/share/hadoop/mapreduce/*:$HADOOP_MAPRED_HOME/share/hadoop/mapreduce/lib/*</value>
-    </property>
-</configuration>
-#+END_SRC
-
-** hdfs-site.xml
-
-#+BEGIN_SRC xml
-<configuration>
-  <property>
-    <name>dfs.replication</name>
-    <value>1</value>
-  </property>
-  <property>
-    <name>dfs.name.dir</name>
-    <value>file:///home/hadoop/hdfs/namenode</value>
-  </property>
-  <property>
-    <name>dfs.data.dir</name>
-    <value>file:///home/hadoop/hdfs/datanode</value>
-  </property>
-  <property>
-    <name>dfs.block.size</name>
-    <value>67108864</value>
-    <description>Block size</description>
-  </property>
-</configuration>
-#+END_SRC
-
-** .bashrc
-
-#+BEGIN_SRC sh
-
-# JDK
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
-export PATH=$PATH:$JAVA_HOME/bin
-
-# Spark
-export SPARK_HOME=/opt/spark
-export PATH=$PATH:$SPARK_HOME/bin
-export PYSPARK_DRIVER_PYTHON=jupyter
-export PYSPARK_DRIVER_PYTHON_OPTS=notebook
-export PYSPARK_PYTHON=/opt/anaconda/anaconda3/envs/ml/bin/python
-
-# Hadoop
-export HADOOP_HOME=/opt/hadoop
-export HADOOP_INSTALL=$HADOOP_HOME
-export HADOOP_MAPRED_HOME=$HADOOP_HOME
-export HADOOP_COMMON_HOME=$HADOOP_HOME
-export HADOOP_HDFS_HOME=$HADOOP_HOME
-export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
-export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib/native"
-export PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin
-export YARN_HOME=$HADOOP_HOME
-
-# Sqoop
-export SQOOP_HOME=/opt/sqoop
-export PATH=$PATH:$SQOOP_HOME/bin
-
-#+END_SRC
+* Hadoop
+** Stanford Course
+[[http://web.stanford.edu/class/cs246/][CS246: Mining Massive Data Sets]]
+[[http://web.stanford.edu/class/cs246h/][CS246H - Mining Massive Data Sets: Hadoop Labs]]
+[[https://www.youtube.com/playlist?list=PLLssT5z_DsK9JDLcT8T62VtzwyW9LNepV][CS246 Youtube playlist]]

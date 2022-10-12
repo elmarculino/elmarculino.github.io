@@ -1,9 +1,10 @@
-+++
-title = "Best command line tools"
-author = ["Marco Ribeiro"]
-date = 2020-02-10
-draft = false
-+++
+---
+title: "Best command line tools"
+author: ["Marco Ribeiro"]
+date: 2020-02-10
+tags: ["bash", "fzf", "ripgrep", "fd"]
+draft: false
+---
 
 ## [broot](https://github.com/Canop/broot) {#broot}
 

@@ -1,9 +1,10 @@
-+++
-title = "Vim Key Bindings"
-author = ["Marco Ribeiro"]
-date = 2020-01-10
-draft = false
-+++
+---
+title: "Vim Key Bindings"
+author: ["Marco Ribeiro"]
+date: 2020-01-10
+tags: ["vim", "shortcuts"]
+draft: false
+---
 
 Vim Command Language and examples of how to get things done.
 

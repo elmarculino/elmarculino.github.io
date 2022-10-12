@@ -1,9 +1,10 @@
-+++
-title = "Emacs Key Bindings"
-author = ["Marco Ribeiro"]
-date = 2020-01-10
-draft = false
-+++
+---
+title: "Emacs Key Bindings"
+author: ["Marco Ribeiro"]
+date: 2020-01-10
+tags: ["emacs", "shortcuts"]
+draft: false
+---
 
 ## Emacs Key Biddings {#emacs-key-biddings}
 

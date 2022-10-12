@@ -1,10 +1,10 @@
-+++
-title = "Extração de Dados do Amazon DynamoDB para Postgres/MySQL"
-author = ["Marco Ribeiro"]
-date = 2022-10-12
-tags = ["postgres", "mysql", "dynamodb", "python", "etl"]
-draft = false
-+++
+---
+title: "Extração de Dados do Amazon DynamoDB para Postgres/MySQL"
+author: ["Marco Ribeiro"]
+date: 2022-10-12
+tags: ["postgres", "mysql", "dynamodb", "python", "etl"]
+draft: false
+---
 
 Um tempo atrás criei uma aplicação web para gerenciamento de contas a pagar e a receber utilizando a infraestrutura da AWS e o Amplify. Ao se criar uma API GraphQL utilizando o Amplify CLI, toda a infraestrutura necessária é criada, incluindo funções Lambda e a base de dados DynamoDB. É tudo muito lindo, mas essa praticidade tem um custo, e não poder executar consultas SQL diretamente nos dados dificulta bastante a análise de dados.
 

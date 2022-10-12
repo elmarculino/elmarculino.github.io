@@ -1,20 +1,12 @@
-+++
-title = "Criando Um Gerador de Imagens de Placas de Carros"
-author = ["Marco Ribeiro"]
-draft = false
-+++
+---
+title: "Criando Um Gerador de Imagens de Placas de Carros"
+author: ["Marco Ribeiro"]
+draft: false
+---
 
-Para treinar um modelo de machine learning que realize o reconhecimento de
-caracteres, OCR, é necessário uma grande quantidade de imagens de placas. Daria
-um trabalho enorme conseguir milhares de imagens de carros com as placas
-visiveis, recortar as placas das imagens e anotar as imagens com os textos dos
-números das placas. Minha solução para obter essas milhares de imagens foi
-simplesmente gerá-las.
+Para treinar um modelo de machine learning que realize o reconhecimento de caracteres, OCR, é necessário uma grande quantidade de imagens de placas. Daria um trabalho enorme conseguir milhares de imagens de carros com as placas visíveis, recortar as placas das imagens e anotar as imagens com os textos dos números das placas. Minha solução para obter essas milhares de imagens foi simplesmente gerá-las.
 
-Como o Brasil está adotando um novo padrão de placas é necessário utilizar dois
-templates. O primeiro utiliza imagens de placas antigas e insere os caracteres
-no padrão ABC-1234, o segundo com imagens de placas novas, insere os caracteres
-com a nova fonte no padrão ABC1D23 com 4 letras e 3 números.
+Como o Brasil está adotando um novo padrão de placas é necessário utilizar dois templates. O primeiro utiliza imagens de placas antigas e insere os caracteres no padrão ABC-1234, o segundo com imagens de placas novas, insere os caracteres com a nova fonte no padrão ABC1D23 com 4 letras e 3 números.
 
 Para gerar os números de placas antigas foram utilizadas as seguintes funções:
 
