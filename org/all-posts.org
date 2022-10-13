@@ -7,7 +7,8 @@
 
 * Extração de Dados do Amazon DynamoDB para Postgres/MySQL :postgres:mysql:dynamodb:python:etl:
 :PROPERTIES:
-:EXPORT_FILE_NAME: extracao-dados-dynamodb-postgres-mysql
+:EXPORT_HUGO_BUNDLE: extracao-dados-dynamodb-postgres-mysql
+:EXPORT_FILE_NAME: index
 :EXPORT_DATE: 2022-10-12
 :END:
 
@@ -82,7 +83,8 @@ df.to_sql('parcelas', con=engine, if_exists='replace', index=False, schema='cont
 
 * Refatoração Azure Data Factory com Bash Script :datafactory:azure:sed:jq:bash:script:
 :PROPERTIES:
-:EXPORT_FILE_NAME: refatoracao-data-factory-bash
+:EXPORT_HUGO_BUNDLE: refatoracao-data-factory-bash
+:EXPORT_FILE_NAME: index
 :EXPORT_DATE: 2022-10-06
 :END:
 
