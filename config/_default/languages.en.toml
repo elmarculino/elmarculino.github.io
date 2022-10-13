@@ -7,7 +7,7 @@ rtl = false
 
 title = "Marco Ribeiro"
 logo = "img/compass.png"
-description = ""
+description = "Personal blog about technology, data engineering, big data, machine learning, linux and open source."
 # copyright = "Copy, _right?_ :thinking_face:"
 
 dateFormat = "2 January 2006"
@@ -15,7 +15,8 @@ dateFormat = "2 January 2006"
 [author]
   name = "Marco Ribeiro"
   image = "img/marcoribeiro.jpg"
-  bio = "Data engineer, developer and technology enthusiast"
+  headline = "Data engineer and cloud developer. Tech Lead at Rox Partner. Linux, tiling window manager, nvim and handwired split QMK keyboard user. Studied geography, graduated in business administration, self-taught programmer. Runner and Trail Rider. Father of two boys. Born and raised between Brasília and Goiás. Living between Maceió and São Miguel dos Milagres. Working from home! Still learning!"
+  bio = "Data engineer, developer and trail rider"
   links = [
     { github = "https://github.com/elmarculino" },
     { linkedin = "https://www.linkedin.com/in/marco-antonio-soares-ribeiro/" },
