@@ -151,6 +151,8 @@ done
 
 #+end_src
 
+É isso, apesar de termos a nossa disposição uma infinidade de ferramentas com interfaces modernas e dinâmicas, as vezes o bom e velho terminal pode te salvar horas de trabalho.
+
 * VIM :vim:shortcuts:
 :PROPERTIES:
 :EXPORT_FILE_NAME: vim-key-bindings
