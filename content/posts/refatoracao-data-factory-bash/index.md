@@ -8,7 +8,7 @@ draft: false
 
 Nem tudo na vida de um engenheiro de dados são flores. As vezes é necessário fazer a "difícil" escolha entre usar força bruta ou passar horas alterando manualmente pipelines de dados em interfaces ‘clica e arrasta’. Para ilustrar o problema em questão, usaremos o caso do orquestrador de pipelines de dados Azure Data Factory da Microsoft. Por trás da interface gráfica, os pipelines, linked services e data sources são salvos em arquivos JSON que se referenciam e que posteriormente são processados para a geração dos ARM Templates e implantação nos workspaces.
 
-Para esse trabalho os principais comandos utilizados foram <span class="underline"><span class="underline">sed</span></span> para a substituição de strings e <span class="underline"><span class="underline">jq</span></span> para a leitura da estrutura dos arquivos JSON diretamente no terminal. Os arquivos do Data Factory foram clonados do repositório GIT do projeto e seguintes comandos foram utilizados para a realização das alterações necessárias.
+Para esse trabalho, os principais comandos utilizados foram **_sed_** para a substituição de strings e **_jq_** para a leitura da estrutura dos arquivos JSON diretamente no terminal. Os arquivos do Data Factory foram clonados do repositório GIT do projeto e seguintes comandos foram utilizados para a realização das alterações necessárias.
 
 
 ## Renomear artefatos no arquivo JSON {#renomear-artefatos-no-arquivo-json}
@@ -72,3 +72,5 @@ for f in $datasets; do
         fi
 done
 ```
+
+É isso, apesar de termos a nossa disposição uma infinidade de ferramentas com interfaces modernas e dinâmicas, as vezes o bom e velho terminal pode te salvar horas de trabalho.
